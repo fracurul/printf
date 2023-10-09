@@ -12,23 +12,30 @@
 
 #include "ft_printf.h"
 
+void   ft_format(va_list va, char *s, size_t *counter)
+{
+    if(s == 'c')
+        ft_putchar((va_arg(va, int), counter));
+}
+
 int	ft_printf(char *s, ...)
 {
 	size_t	i;
-	va_list	pro;
+    size_t  counter;
+	va_list	formats;
 
-	va_start(pro, s);
-	i = va_arg(pro, &s[i]);
-	/*i =  -1;
+	va_start(formats, s);
+	i =  -1;
+    counter = 0;
 	while (s[++i])
-		write(1, &s[i], 1);
-	*/
-	va_end(pro);
-	return (i);
-}
-#include <stdio.h>
+    {
+		if (s[i] == '%')
+        {
+            i++;
+            ft_format(formats, s[i], counter);
+        }
 
-int	main(void)
-{
-	printf("%i", ft_printf("", 200));
+    }    
+	va_end(formats);
+	return (i);
 }
