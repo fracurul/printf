@@ -6,7 +6,7 @@
 /*   By: fracurul <fracurul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/08 19:13:44 by fracurul          #+#    #+#             */
-/*   Updated: 2023/10/09 21:16:49 by fracurul         ###   ########.fr       */
+/*   Updated: 2023/10/09 21:26:12 by fracurul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,9 +45,3 @@ int	ft_printf(char *s, ...)
 	return (i);
 }
 
-#include <stdio.h>
-
-int main()
-{
-    printf()
-}
