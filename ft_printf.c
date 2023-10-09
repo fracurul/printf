@@ -6,7 +6,7 @@
 /*   By: fracurul <fracurul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/08 19:13:44 by fracurul          #+#    #+#             */
-/*   Updated: 2023/10/08 19:13:47 by fracurul         ###   ########.fr       */
+/*   Updated: 2023/10/09 21:16:49 by fracurul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,12 @@
 void   ft_format(va_list va, char *s, size_t *counter)
 {
     if(s == 'c')
-        ft_putchar((va_arg(va, int), counter));
+        ft_putchar(va_arg(va, int), counter);
+    else if (s == 's')
+        ft_putstr(va_arg(va, char *), counter);
+    else if(s == 'p')
+        
+        
 }
 
 int	ft_printf(char *s, ...)
@@ -38,4 +43,11 @@ int	ft_printf(char *s, ...)
     }    
 	va_end(formats);
 	return (i);
+}
+
+#include <stdio.h>
+
+int main()
+{
+    printf()
 }
