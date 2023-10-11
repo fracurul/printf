@@ -6,20 +6,20 @@
 /*   By: fracurul <fracurul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 20:34:07 by fracurul          #+#    #+#             */
-/*   Updated: 2023/10/09 19:45:34 by fracurul         ###   ########.fr       */
+/*   Updated: 2023/10/11 17:23:47 by fracurul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void    ft_putchar(char c, size_t *counter)
+void    ft_printchar(char c, size_t *bytecnt)
 {
     write(1, &c, 1);
-    counter++;
+    bytecnt++;
 }
 
 
-void    ft_putstr(char *str, size_t counter)
+void    ft_printstr(char *str, size_t *bytecnt)
 {
     size_t  i;
     
@@ -27,8 +27,26 @@ void    ft_putstr(char *str, size_t counter)
     while(str[++i])
     {
         write(1, &str[i], 1);
-        counter++;
+        bytecnt++;
     }
+}
+
+void ft_printnb(int long nb, size_t *bytecnt)
+{
+    if(nb < 0)
+    {
+        ft_printchar('-', bytecnt);
+        nb *= -1;
+        
+    }
+    if(nb > 9)
+    {
+        ft_printnbr(nb / 10);
+        ft_printnbr(nb % 10);
+        bytecnt += 2;   
+    }
+    else
+        ft_printchar(nb + '0', bytecnt);
 }
 
 size_t  ft_percent(void)
