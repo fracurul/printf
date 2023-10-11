@@ -6,7 +6,7 @@
 #    By: fracurul <fracurul@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/09 19:56:40 by fracurul          #+#    #+#              #
-#    Updated: 2023/10/09 21:16:08 by fracurul         ###   ########.fr        #
+#    Updated: 2023/10/11 17:20:21 by fracurul         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,7 +32,7 @@ FLAGS = -Wall -Wextra -Werror
 #           LIB FUNCTIONS               #
 #########################################
 
-SRC = ft_printf.c \
+SRC = ft_printf.c ft_printf_utils.c ft_printhex.c\
 
 #########################################
 #              LIB INDEX                #
