@@ -6,7 +6,7 @@
 /*   By: fracurul <fracurul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 17:09:32 by fracurul          #+#    #+#             */
-/*   Updated: 2023/10/19 17:16:54 by fracurul         ###   ########.fr       */
+/*   Updated: 2023/10/19 17:39:02 by fracurul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,8 @@ void    ft_printbase(unsigned long long nb, char *base, size_t *bytecnt)
 {
     if (nb >= ft_strlen(base))
     {
-        ft_printbase(nb / ft_strlen(base), base);
-        ft_printbase(nb % ft_strlen(base), base);
+        ft_printbase(nb / ft_strlen(base), base, bytecnt);
+        ft_printbase(nb % ft_strlen(base), base, bytecnt);
     }
     else
         ft_printchar(nb +'0', bytecnt);

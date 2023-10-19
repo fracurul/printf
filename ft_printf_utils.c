@@ -6,7 +6,7 @@
 /*   By: fracurul <fracurul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 20:34:07 by fracurul          #+#    #+#             */
-/*   Updated: 2023/10/19 17:27:08 by fracurul         ###   ########.fr       */
+/*   Updated: 2023/10/19 17:38:05 by fracurul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@ void    ft_printchar(char c, size_t *bytecnt)
     write(1, &c, 1);
     bytecnt++;
 }
-
 
 void    ft_printstr(char *str, size_t *bytecnt)
 {
@@ -41,8 +40,8 @@ void ft_printnb(int long nb, size_t *bytecnt)
     }
     if(nb > 9)
     {
-        ft_printnb(nb / 10);
-        ft_printnb(nb % 10);
+        ft_printnb(nb / 10, bytecnt);
+        ft_printnb(nb % 10, bytecnt);
     }
     else
         ft_printchar(nb + '0', bytecnt);
