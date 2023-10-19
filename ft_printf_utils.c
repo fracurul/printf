@@ -6,7 +6,7 @@
 /*   By: fracurul <fracurul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 20:34:07 by fracurul          #+#    #+#             */
-/*   Updated: 2023/10/16 17:15:48 by fracurul         ###   ########.fr       */
+/*   Updated: 2023/10/19 17:27:08 by fracurul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,8 +41,8 @@ void ft_printnb(int long nb, size_t *bytecnt)
     }
     if(nb > 9)
     {
-        ft_printnbr(nb / 10);
-        ft_printnbr(nb % 10);
+        ft_printnb(nb / 10);
+        ft_printnb(nb % 10);
     }
     else
         ft_printchar(nb + '0', bytecnt);
